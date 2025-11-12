@@ -1,0 +1,71 @@
+restaurant,name,description,calories,protein,carbs,fat,sodium,fiber,sugar
+McDonald's,Big Mac,Two all-beef patties special sauce lettuce cheese pickles onions on a sesame seed bun,563,25,45,33,1017,3,9
+McDonald's,Quarter Pounder with Cheese,Quarter pound beef patty with cheese,520,26,42,26,1115,3,10
+McDonald's,McChicken,Chicken patty with mayonnaise,400,14,39,21,650,2,5
+McDonald's,French Fries (Medium),Crispy golden fries,320,4,43,15,260,4,0
+McDonald's,McFlurry (Oreo),Vanilla soft serve with Oreo cookies,510,11,67,21,230,1,54
+McDonald's,Apple Pie,Flaky pastry with apple filling,250,2,33,13,170,2,18
+McDonald's,McNuggets (10 piece),Chicken nuggets,440,24,26,27,900,1,0
+McDonald's,Filet-O-Fish,Fish patty with tartar sauce,390,15,38,19,560,1,5
+Burger King,Whopper,Flame-grilled beef patty with tomatoes lettuce mayo ketchup pickles onions,660,28,49,40,980,3,11
+Burger King,Chicken Whopper,Grilled chicken patty with vegetables,630,35,49,28,1290,3,11
+Burger King,Chicken Fries (9 piece),Breaded chicken fries,280,14,22,16,770,1,0
+Burger King,Onion Rings (Medium),Battered and fried onion rings,400,6,45,21,790,3,7
+Burger King,Bacon Cheeseburger,Beef patty with bacon and cheese,380,19,30,22,820,2,7
+Burger King,French Fries (Medium),Crispy fries,380,4,53,17,530,5,0
+Burger King,Chocolate Shake,Vanilla soft serve with chocolate syrup,570,13,89,18,320,0,76
+KFC,Original Recipe Chicken (2 piece),Fried chicken pieces,470,31,19,30,1120,1,0
+KFC,Extra Crispy Chicken (2 piece),Extra crispy fried chicken,530,33,17,37,1090,1,0
+KFC,Popcorn Chicken (Large),Bite-sized chicken pieces,670,42,45,36,1920,2,3
+KFC,Mac and Cheese,Creamy macaroni and cheese,200,9,23,8,710,1,3
+KFC,Mashed Potatoes with Gravy,Creamy mashed potatoes,120,3,20,4,540,2,1
+KFC,Biscuit,Buttery biscuit,180,4,22,8,530,1,2
+KFC,Coleslaw,Shredded cabbage with dressing,150,1,15,10,280,2,13
+KFC,Potato Wedges,Fried potato wedges,290,5,38,14,690,4,0
+Subway,Italian BMT (6 inch),Pepperoni salami ham with vegetables,410,20,46,16,1250,5,8
+Subway,Turkey Breast (6 inch),Oven-roasted turkey with vegetables,280,18,46,3,810,5,8
+Subway,Chicken Teriyaki (6 inch),Grilled chicken with teriyaki sauce,370,26,47,8,890,5,12
+Subway,Veggie Delite (6 inch),Fresh vegetables,230,9,44,3,280,5,7
+Subway,Meatball Marinara (6 inch),Meatballs with marinara sauce,480,20,47,19,1280,5,10
+Subway,Chipotle Southwest Chicken (6 inch),Grilled chicken with chipotle sauce,350,25,45,8,940,5,9
+Subway,Black Forest Ham (6 inch),Ham with vegetables,290,18,46,4,1140,5,8
+Subway,Cookie (Chocolate Chip),Chocolate chip cookie,210,2,30,9,105,1,18
+Taco Bell,Crunchwrap Supreme,Grilled tortilla with beef nacho cheese sour cream,530,16,46,31,1320,4,6
+Taco Bell,Bean Burrito,Refried beans with red sauce,370,14,55,10,1160,9,4
+Taco Bell,Chicken Quesadilla,Grilled chicken with cheese,510,27,37,26,1360,2,3
+Taco Bell,Soft Taco,Seasoned beef with lettuce cheese,180,9,16,9,390,2,1
+Taco Bell,Cheesy Gordita Crunch,Beef cheese lettuce in a gordita shell,500,19,39,29,1040,3,5
+Taco Bell,Cinnamon Twists,Crispy cinnamon twists,170,2,25,8,120,1,9
+Taco Bell,Chicken Chalupa,Chicken in a chalupa shell,350,14,29,20,730,3,2
+Pizza Hut,Pepperoni Pizza (1 slice),Classic pepperoni pizza,280,12,33,12,640,2,4
+Pizza Hut,Cheese Pizza (1 slice),Classic cheese pizza,240,11,30,9,550,2,3
+Pizza Hut,Meat Lovers Pizza (1 slice),Pepperoni sausage ham bacon,320,15,33,16,810,2,4
+Pizza Hut,Veggie Pizza (1 slice),Fresh vegetables,220,10,30,8,520,3,4
+Pizza Hut,Breadsticks (1 piece),Garlic breadstick,140,4,20,5,280,1,1
+Pizza Hut,Cinnamon Sticks (1 piece),Sweet cinnamon breadstick,120,2,18,5,130,1,6
+Domino's,Pepperoni Pizza (1 slice),Handmade pepperoni pizza,290,13,34,13,690,2,4
+Domino's,Cheese Pizza (1 slice),Handmade cheese pizza,250,12,31,10,600,2,3
+Domino's,BBQ Chicken Pizza (1 slice),Grilled chicken with BBQ sauce,310,16,33,13,750,2,5
+Domino's,Chicken Wings (6 piece),Breaded chicken wings,360,28,14,22,980,1,0
+Domino's,Pasta (Chicken Alfredo),Creamy alfredo pasta with chicken,380,20,42,15,920,3,4
+Wendy's,Classic Single,Quarter pound beef patty,430,23,35,22,870,2,7
+Wendy's,Spicy Chicken Sandwich,Breaded spicy chicken,510,27,48,21,1380,3,5
+Wendy's,Chicken Nuggets (6 piece),Breaded chicken nuggets,270,14,15,16,600,1,0
+Wendy's,Frosty (Small),Vanilla frozen dessert,350,9,47,15,140,0,47
+Wendy's,Baked Potato,Loaded baked potato,470,9,63,20,60,7,3
+Wendy's,Caesar Side Salad,Caesar salad,90,4,6,6,250,2,3
+Generic,Burger,Classic beef burger with bun,540,25,45,28,980,3,8
+Generic,Cheeseburger,Beef burger with cheese,630,29,46,35,1120,3,9
+Generic,Double Burger,Double beef patty burger,720,42,47,42,1260,3,9
+Generic,Fries,Regular french fries,365,4,48,18,260,4,0
+Generic,Large Fries,Large french fries,510,6,66,25,350,6,0
+Generic,Chicken Nuggets,6 piece chicken nuggets,280,14,16,17,540,1,0
+Generic,Chicken Sandwich,Fried chicken sandwich,470,26,42,22,910,2,5
+Generic,Salad,Garden salad with dressing,180,6,12,13,380,3,4
+Generic,Soda,Regular soft drink,150,0,39,0,45,0,39
+Generic,Water,Plain water,0,0,0,0,0,0,0
+Generic,Milkshake,Chocolate milkshake,530,14,83,16,280,0,71
+Generic,Ice Cream,Vanilla ice cream,207,3,24,11,80,0,21
+Generic,Apple Slices,Fresh apple slices,35,0,9,0,0,1,7
+Generic,Yogurt Parfait,Yogurt with granola and fruit,150,4,30,2,80,1,23
+Generic,Wrap,Chicken wrap,320,20,35,10,890,2,3

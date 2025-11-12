@@ -1,0 +1,225 @@
+item_name,restaurant,ingredient_name,quantity_g
+Big Mac,McDonald's,Bun (Sesame),100
+Big Mac,McDonald's,Beef Patty (100g),150
+Big Mac,McDonald's,Cheese (American),25
+Big Mac,McDonald's,Lettuce,20
+Big Mac,McDonald's,Tomato,15
+Big Mac,McDonald's,Onion,10
+Big Mac,McDonald's,Pickles,10
+Big Mac,McDonald's,Special Sauce,20
+Quarter Pounder with Cheese,McDonald's,Bun (Sesame),100
+Quarter Pounder with Cheese,McDonald's,Beef Patty (100g),113
+Quarter Pounder with Cheese,McDonald's,Cheese (American),25
+Quarter Pounder with Cheese,McDonald's,Onion,10
+Quarter Pounder with Cheese,McDonald's,Pickles,10
+Quarter Pounder with Cheese,McDonald's,Ketchup,15
+Quarter Pounder with Cheese,McDonald's,Mustard,5
+McChicken,McDonald's,Bun (Sesame),80
+McChicken,McDonald's,Chicken Breast (100g),100
+McChicken,McDonald's,Mayonnaise,20
+McChicken,McDonald's,Lettuce,15
+French Fries (Medium),McDonald's,French Fries,100
+McNuggets (10 piece),McDonald's,Chicken Nugget,160
+Filet-O-Fish,McDonald's,Bun (Sesame),80
+Filet-O-Fish,McDonald's,Fish Fillet,100
+Filet-O-Fish,McDonald's,Cheese (American),20
+Filet-O-Fish,McDonald's,Tartar Sauce,20
+Whopper,Burger King,Bun (Sesame),110
+Whopper,Burger King,Beef Patty (100g),150
+Whopper,Burger King,Tomato,20
+Whopper,Burger King,Lettuce,25
+Whopper,Burger King,Onion,15
+Whopper,Burger King,Pickles,10
+Whopper,Burger King,Mayonnaise,15
+Whopper,Burger King,Ketchup,10
+Chicken Whopper,Burger King,Bun (Sesame),110
+Chicken Whopper,Burger King,Chicken Breast (100g),120
+Chicken Whopper,Burger King,Tomato,20
+Chicken Whopper,Burger King,Lettuce,25
+Chicken Whopper,Burger King,Onion,15
+Chicken Whopper,Burger King,Mayonnaise,15
+Chicken Fries (9 piece),Burger King,Chicken Nugget,140
+Onion Rings (Medium),Burger King,Onion Rings,120
+Bacon Cheeseburger,Burger King,Bun (White),100
+Bacon Cheeseburger,Burger King,Beef Patty (100g),100
+Bacon Cheeseburger,Burger King,Bacon,20
+Bacon Cheeseburger,Burger King,Cheese (American),25
+Bacon Cheeseburger,Burger King,Ketchup,10
+Bacon Cheeseburger,Burger King,Mustard,5
+Original Recipe Chicken (2 piece),KFC,Chicken Breast (100g),200
+Popcorn Chicken (Large),KFC,Chicken Nugget,180
+Mac and Cheese,KFC,Pasta (Cooked),120
+Mac and Cheese,KFC,Cheese (Cheddar),40
+Mashed Potatoes with Gravy,KFC,Potato,150
+Mashed Potatoes with Gravy,KFC,Gravy,30
+Biscuit,KFC,Flour,50
+Biscuit,KFC,Butter,15
+Biscuit,KFC,Milk,20
+Coleslaw,KFC,Cabbage,100
+Coleslaw,KFC,Mayonnaise,15
+Coleslaw,KFC,Sugar,5
+Potato Wedges,KFC,Potato,150
+Italian BMT (6 inch),Subway,Bun (White),80
+Italian BMT (6 inch),Subway,Pepperoni,30
+Italian BMT (6 inch),Subway,Sausage,30
+Italian BMT (6 inch),Subway,Ham,30
+Italian BMT (6 inch),Subway,Cheese (American),20
+Italian BMT (6 inch),Subway,Lettuce,20
+Italian BMT (6 inch),Subway,Tomato,15
+Italian BMT (6 inch),Subway,Onion,10
+Italian BMT (6 inch),Subway,Mayonnaise,10
+Turkey Breast (6 inch),Subway,Bun (White),80
+Turkey Breast (6 inch),Subway,Turkey,60
+Turkey Breast (6 inch),Subway,Cheese (American),15
+Turkey Breast (6 inch),Subway,Lettuce,20
+Turkey Breast (6 inch),Subway,Tomato,15
+Turkey Breast (6 inch),Subway,Onion,10
+Chicken Teriyaki (6 inch),Subway,Bun (White),80
+Chicken Teriyaki (6 inch),Subway,Chicken Breast (100g),100
+Chicken Teriyaki (6 inch),Subway,Teriyaki Sauce,25
+Chicken Teriyaki (6 inch),Subway,Lettuce,15
+Chicken Teriyaki (6 inch),Subway,Tomato,10
+Veggie Delite (6 inch),Subway,Bun (White),80
+Veggie Delite (6 inch),Subway,Lettuce,40
+Veggie Delite (6 inch),Subway,Tomato,25
+Veggie Delite (6 inch),Subway,Onion,15
+Veggie Delite (6 inch),Subway,Pepper,10
+Meatball Marinara (6 inch),Subway,Bun (White),80
+Meatball Marinara (6 inch),Subway,Beef Patty (100g),100
+Meatball Marinara (6 inch),Subway,Marinara Sauce,40
+Meatball Marinara (6 inch),Subway,Mozzarella Cheese,25
+Chipotle Southwest Chicken (6 inch),Subway,Bun (White),80
+Chipotle Southwest Chicken (6 inch),Subway,Chicken Breast (100g),100
+Chipotle Southwest Chicken (6 inch),Subway,Chipotle Sauce,20
+Chipotle Southwest Chicken (6 inch),Subway,Lettuce,20
+Chipotle Southwest Chicken (6 inch),Subway,Tomato,15
+Black Forest Ham (6 inch),Subway,Bun (White),80
+Black Forest Ham (6 inch),Subway,Ham,60
+Black Forest Ham (6 inch),Subway,Cheese (American),15
+Black Forest Ham (6 inch),Subway,Lettuce,20
+Black Forest Ham (6 inch),Subway,Tomato,15
+Crunchwrap Supreme,Taco Bell,Tortilla (Flour),80
+Crunchwrap Supreme,Taco Bell,Beef Patty (100g),80
+Crunchwrap Supreme,Taco Bell,Nacho Cheese,30
+Crunchwrap Supreme,Taco Bell,Sour Cream,20
+Crunchwrap Supreme,Taco Bell,Lettuce,15
+Crunchwrap Supreme,Taco Bell,Tomato,10
+Bean Burrito,Taco Bell,Tortilla (Flour),80
+Bean Burrito,Taco Bell,Beans (Refried),100
+Bean Burrito,Taco Bell,Red Sauce,25
+Bean Burrito,Taco Bell,Cheese (Cheddar),15
+Chicken Quesadilla,Taco Bell,Tortilla (Flour),100
+Chicken Quesadilla,Taco Bell,Chicken Breast (100g),80
+Chicken Quesadilla,Taco Bell,Cheese (Cheddar),40
+Soft Taco,Taco Bell,Tortilla (Flour),50
+Soft Taco,Taco Bell,Beef Patty (100g),60
+Soft Taco,Taco Bell,Lettuce,15
+Soft Taco,Taco Bell,Cheese (Cheddar),10
+Pepperoni Pizza (1 slice),Pizza Hut,Pizza Dough,80
+Pepperoni Pizza (1 slice),Pizza Hut,Pizza Sauce,20
+Pepperoni Pizza (1 slice),Pizza Hut,Mozzarella Cheese,30
+Pepperoni Pizza (1 slice),Pizza Hut,Pepperoni,15
+Cheese Pizza (1 slice),Pizza Hut,Pizza Dough,80
+Cheese Pizza (1 slice),Pizza Hut,Pizza Sauce,20
+Cheese Pizza (1 slice),Pizza Hut,Mozzarella Cheese,35
+Meat Lovers Pizza (1 slice),Pizza Hut,Pizza Dough,80
+Meat Lovers Pizza (1 slice),Pizza Hut,Pizza Sauce,20
+Meat Lovers Pizza (1 slice),Pizza Hut,Mozzarella Cheese,25
+Meat Lovers Pizza (1 slice),Pizza Hut,Pepperoni,10
+Meat Lovers Pizza (1 slice),Pizza Hut,Sausage,15
+Meat Lovers Pizza (1 slice),Pizza Hut,Bacon,10
+Veggie Pizza (1 slice),Pizza Hut,Pizza Dough,80
+Veggie Pizza (1 slice),Pizza Hut,Pizza Sauce,20
+Veggie Pizza (1 slice),Pizza Hut,Mozzarella Cheese,25
+Veggie Pizza (1 slice),Pizza Hut,Tomato,20
+Veggie Pizza (1 slice),Pizza Hut,Onion,15
+Veggie Pizza (1 slice),Pizza Hut,Pepper,10
+Breadsticks (1 piece),Pizza Hut,Flour,30
+Breadsticks (1 piece),Pizza Hut,Butter,5
+Breadsticks (1 piece),Pizza Hut,Garlic,2
+Pepperoni Pizza (1 slice),Domino's,Pizza Dough,80
+Pepperoni Pizza (1 slice),Domino's,Pizza Sauce,20
+Pepperoni Pizza (1 slice),Domino's,Mozzarella Cheese,30
+Pepperoni Pizza (1 slice),Domino's,Pepperoni,15
+Cheese Pizza (1 slice),Domino's,Pizza Dough,80
+Cheese Pizza (1 slice),Domino's,Pizza Sauce,20
+Cheese Pizza (1 slice),Domino's,Mozzarella Cheese,35
+BBQ Chicken Pizza (1 slice),Domino's,Pizza Dough,80
+BBQ Chicken Pizza (1 slice),Domino's,Pizza Sauce,20
+BBQ Chicken Pizza (1 slice),Domino's,Mozzarella Cheese,25
+BBQ Chicken Pizza (1 slice),Domino's,Chicken Breast (100g),60
+BBQ Chicken Pizza (1 slice),Domino's,BBQ Sauce,15
+Chicken Wings (6 piece),Domino's,Chicken Nugget,180
+Pasta (Chicken Alfredo),Domino's,Pasta (Cooked),150
+Pasta (Chicken Alfredo),Domino's,Chicken Breast (100g),80
+Pasta (Chicken Alfredo),Domino's,Alfredo Sauce,50
+Classic Single,Wendy's,Bun (White),100
+Classic Single,Wendy's,Beef Patty (100g),113
+Classic Single,Wendy's,Lettuce,15
+Classic Single,Wendy's,Tomato,10
+Classic Single,Wendy's,Onion,8
+Classic Single,Wendy's,Ketchup,10
+Classic Single,Wendy's,Mustard,5
+Spicy Chicken Sandwich,Wendy's,Bun (White),90
+Spicy Chicken Sandwich,Wendy's,Chicken Breast (100g),120
+Spicy Chicken Sandwich,Wendy's,Mayonnaise,15
+Spicy Chicken Sandwich,Wendy's,Lettuce,15
+Chicken Nuggets (6 piece),Wendy's,Chicken Nugget,140
+Frosty (Small),Wendy's,Ice Cream,200
+Frosty (Small),Wendy's,Milk,50
+Frosty (Small),Wendy's,Sugar,20
+Baked Potato,Wendy's,Potato,250
+Baked Potato,Wendy's,Butter,15
+Baked Potato,Wendy's,Sour Cream,30
+Baked Potato,Wendy's,Cheese (Cheddar),20
+Caesar Side Salad,Wendy's,Lettuce,80
+Caesar Side Salad,Wendy's,Salad Dressing (Caesar),25
+Caesar Side Salad,Wendy's,Croutons,15
+Burger,Generic,Bun (White),100
+Burger,Generic,Beef Patty (100g),120
+Burger,Generic,Lettuce,15
+Burger,Generic,Tomato,10
+Burger,Generic,Onion,8
+Burger,Generic,Ketchup,10
+Burger,Generic,Mustard,5
+Cheeseburger,Generic,Bun (White),100
+Cheeseburger,Generic,Beef Patty (100g),120
+Cheeseburger,Generic,Cheese (American),25
+Cheeseburger,Generic,Lettuce,15
+Cheeseburger,Generic,Tomato,10
+Cheeseburger,Generic,Onion,8
+Cheeseburger,Generic,Ketchup,10
+Double Burger,Generic,Bun (White),100
+Double Burger,Generic,Beef Patty (100g),240
+Double Burger,Generic,Lettuce,15
+Double Burger,Generic,Tomato,10
+Double Burger,Generic,Onion,8
+Double Burger,Generic,Ketchup,15
+Double Burger,Generic,Mustard,5
+Fries,Generic,French Fries,100
+Large Fries,Generic,French Fries,180
+Chicken Nuggets,Generic,Chicken Nugget,140
+Chicken Sandwich,Generic,Bun (White),90
+Chicken Sandwich,Generic,Chicken Breast (100g),100
+Chicken Sandwich,Generic,Mayonnaise,15
+Chicken Sandwich,Generic,Lettuce,15
+Salad,Generic,Lettuce,80
+Salad,Generic,Tomato,30
+Salad,Generic,Onion,10
+Salad,Generic,Salad Dressing (Caesar),25
+Soda,Generic,Soda,400
+Water,Generic,Water,250
+Milkshake,Generic,Ice Cream,150
+Milkshake,Generic,Milk,100
+Milkshake,Generic,Chocolate Syrup,30
+Milkshake,Generic,Whipped Cream,20
+Ice Cream,Generic,Ice Cream,100
+Apple Slices,Generic,Apple,100
+Yogurt Parfait,Generic,Yogurt (Plain),150
+Yogurt Parfait,Generic,Granola,30
+Yogurt Parfait,Generic,Strawberry,20
+Wrap,Generic,Tortilla (Flour),80
+Wrap,Generic,Chicken Breast (100g),80
+Wrap,Generic,Lettuce,30
+Wrap,Generic,Tomato,20
+Wrap,Generic,Mayonnaise,10

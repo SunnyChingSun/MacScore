@@ -1,0 +1,16 @@
+restaurant,name,description,calories,protein,carbs,fat,sodium,fiber,sugar
+Generic,Burger,Classic beef burger with bun,540,25,45,28,980,3,8
+Generic,Cheeseburger,Beef burger with cheese,630,29,46,35,1120,3,9
+Generic,Double Burger,Double beef patty burger,720,42,47,42,1260,3,9
+Generic,Fries,Regular french fries,365,4,48,18,260,4,0
+Generic,Large Fries,Large french fries,510,6,66,25,350,6,0
+Generic,Chicken Nuggets,6 piece chicken nuggets,280,14,16,17,540,1,0
+Generic,Chicken Sandwich,Fried chicken sandwich,470,26,42,22,910,2,5
+Generic,Salad,Garden salad with dressing,180,6,12,13,380,3,4
+Generic,Soda,Regular soft drink,150,0,39,0,45,0,39
+Generic,Water,Plain water,0,0,0,0,0,0,0
+Generic,Milkshake,Chocolate milkshake,530,14,83,16,280,0,71
+Generic,Ice Cream,Vanilla ice cream,207,3,24,11,80,0,21
+Generic,Apple Slices,Fresh apple slices,35,0,9,0,0,1,7
+Generic,Yogurt Parfait,Yogurt with granola and fruit,150,4,30,2,80,1,23
+Generic,Wrap,Chicken wrap,320,20,35,10,890,2,3

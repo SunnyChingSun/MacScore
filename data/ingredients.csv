@@ -1,0 +1,76 @@
+name,calories_per_100g,protein,carbs,fat,sodium,fiber,sugar,allergen_flags
+Beef Patty (100g),250,20,0,18,70,0,0,"beef"
+Chicken Breast (100g),165,31,0,3.6,74,0,0,"poultry"
+Bun (White),265,9,50,4,400,2,5,"gluten,wheat"
+Bun (Sesame),280,9,52,5,420,2,6,"gluten,wheat,sesame"
+Lettuce,15,1.4,3,0.2,28,1.3,0.8,
+Tomato,18,0.9,3.9,0.2,5,1.2,2.6,
+Onion,40,1.1,9.3,0.1,4,1.7,4.2,
+Pickles,11,0.3,2.3,0.2,1208,1,1.1,
+Cheese (American),371,18,2,31,621,0,0.5,"dairy"
+Cheese (Cheddar),403,25,1.3,33,621,0,0.5,"dairy"
+Mayonnaise,680,1,0.6,75,635,0,0.3,"egg"
+Ketchup,112,1.2,25,0.3,907,0.4,22.8,
+Mustard,66,3.7,5.8,3.3,1135,3.2,2.8,
+Special Sauce,350,2,8,35,450,0.2,6,"egg,dairy"
+Bacon,541,37,1.4,42,1717,0,0,"pork"
+Pepperoni,494,19,2,44,1583,0,0.4,"pork"
+Sausage,301,13,2,26,810,0,0.3,"pork"
+Ham,145,21,1.5,5.5,1203,0,0,"pork"
+Turkey,135,30,0,1,1093,0,0,"poultry"
+Fish Fillet,206,18,15,9,340,0.5,0,"fish"
+French Fries,365,4,63,17,210,4.7,0.4,
+Onion Rings,411,5.8,44,21,790,3.2,7.4,
+Chicken Nugget,296,16,14,18,540,0.8,0,"poultry"
+Tortilla (Flour),312,8.5,52,7.4,530,2.7,0.7,"gluten,wheat"
+Tortilla (Corn),218,5.7,45,2.5,20,6.3,0.9,"corn"
+Rice (White),130,2.7,28,0.3,1,0.4,0.1,
+Beans (Refried),90,5,14,1,560,5,0.7,
+Nacho Cheese,320,18,5,25,620,0,1,"dairy"
+Sour Cream,198,2.4,4.6,19,30,0,3.2,"dairy"
+Guacamole,160,2,9,15,7,7,0.7,
+Salsa,36,1.5,7,0.2,430,1.4,4.4,
+Teriyaki Sauce,89,3.6,18,0.1,1205,0.1,16,
+Chipotle Sauce,120,1.2,8,9,350,0.5,4,
+Marinara Sauce,29,1.2,6.6,0.2,430,1.8,4.8,
+Red Sauce,20,0.8,4,0.1,350,1.2,3,
+Pizza Dough,266,8.5,50,2.6,520,2,2.5,"gluten,wheat"
+Pizza Sauce,29,1.2,6.6,0.2,430,1.8,4.8,
+Mozzarella Cheese,300,22,2.2,22,627,0,1,"dairy"
+Pasta (Cooked),131,5,25,1.1,1,1.8,0.6,"gluten,wheat"
+Alfredo Sauce,300,6,4,30,800,0,2,"dairy"
+Ice Cream,207,3.6,24,11,80,0,21.2,"dairy"
+Chocolate Syrup,279,2.8,65,1.1,45,2.8,58.3,
+Whipped Cream,257,3.2,12.5,22,54,0,12.5,"dairy"
+Cookie Dough,478,6,64,22,320,2,36,"gluten,wheat,egg"
+Apple,52,0.3,14,0.2,1,2.4,10.4,
+Banana,89,1.1,23,0.3,1,2.6,12.2,
+Strawberry,32,0.7,7.7,0.3,1,2,4.9,
+Yogurt (Plain),59,10,3.6,0.4,36,0,3.6,"dairy"
+Granola,471,10,64,20,26,7,24,"gluten"
+Nuts (Mixed),607,20,21,54,273,7,4.3,"tree_nuts"
+Salad Dressing (Caesar),470,2,4,50,1120,0,3,"egg,dairy"
+Salad Dressing (Ranch),390,1,4,41,560,0,4,"dairy,egg"
+Croutons,407,12,63,6,660,4,4.8,"gluten,wheat"
+Breadcrumbs,395,13,72,5,732,4,6.2,"gluten,wheat"
+Egg,155,13,1.1,11,124,0,1.1,"egg"
+Milk,42,3.4,5,1,44,0,5,"dairy"
+Butter,717,0.9,0.1,81,11,0,0.1,"dairy"
+Oil (Vegetable),884,0,0,100,0,0,0,
+Salt,0,0,0,0,38758,0,0,
+Sugar,387,0,100,0,1,0,99.8,
+Flour,364,10,76,1,2,2.7,0.3,"gluten,wheat"
+Baking Powder,53,0.1,27,0.1,7890,0.2,0,
+Yeast,105,8.4,18,1.9,30,8.1,0,
+Water,0,0,0,0,0,0,0,
+Salt (Table),0,0,0,0,38758,0,0,
+Pepper,251,10,64,3.3,20,25.3,0.6,
+Garlic,149,6.4,33,0.5,17,2.1,1,
+Oregano,265,9,69,4.3,26,42.5,4.1,
+Basil,22,3.2,2.6,0.6,4,1.6,0.3,
+Tartar Sauce,320,1.5,8,32,450,0.2,4,"egg"
+BBQ Sauce,120,1.2,28,0.5,450,0.3,24,
+Gravy,35,1.5,4,1.5,350,0.2,0.5,
+Potato,77,2,17,0.1,6,2.2,0.8,
+Cabbage,25,1.3,6,0.1,18,2.5,3.2,
+Soda,37.5,0,10,0,11,0,10,
