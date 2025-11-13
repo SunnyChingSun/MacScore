@@ -1,41 +1,31 @@
 import { create } from "zustand";
-import { persist } from "zustand/middleware";
 import { Customization } from "@/types";
 
 interface CustomizationState {
-  customizations: Record<string, Customization[]>; // itemId -> customizations
+  customizations: Record<string, Customization[]>;
+  getCustomizations: (itemId: string) => Customization[] | undefined;
   setCustomizations: (itemId: string, customizations: Customization[]) => void;
-  getCustomizations: (itemId: string) => Customization[];
   clearCustomizations: (itemId: string) => void;
 }
 
-export const useCustomizationStore = create<CustomizationState>()(
-  persist(
-    (set, get) => ({
-      customizations: {},
-
-      setCustomizations: (itemId, customizations) =>
-        set((state) => ({
-          customizations: {
-            ...state.customizations,
-            [itemId]: customizations,
-          },
-        })),
-
-      getCustomizations: (itemId) => {
-        const state = get();
-        return state.customizations[itemId] || [];
+export const useCustomizationStore = create<CustomizationState>((set, get) => ({
+  customizations: {},
+  getCustomizations: (itemId: string) => {
+    return get().customizations[itemId];
+  },
+  setCustomizations: (itemId: string, customizations: Customization[]) => {
+    set((state) => ({
+      customizations: {
+        ...state.customizations,
+        [itemId]: customizations,
       },
+    }));
+  },
+  clearCustomizations: (itemId: string) => {
+    set((state) => {
+      const { [itemId]: _, ...rest } = state.customizations;
+      return { customizations: rest };
+    });
+  },
+}));
 
-      clearCustomizations: (itemId) =>
-        set((state) => {
-          const newCustomizations = { ...state.customizations };
-          delete newCustomizations[itemId];
-          return { customizations: newCustomizations };
-        }),
-    }),
-    {
-      name: "macscore-customization-storage",
-    }
-  )
-);

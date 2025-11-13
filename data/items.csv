@@ -43,11 +43,39 @@ Pizza Hut,Meat Lovers Pizza (1 slice),Pepperoni sausage ham bacon,320,15,33,16,8
 Pizza Hut,Veggie Pizza (1 slice),Fresh vegetables,220,10,30,8,520,3,4
 Pizza Hut,Breadsticks (1 piece),Garlic breadstick,140,4,20,5,280,1,1
 Pizza Hut,Cinnamon Sticks (1 piece),Sweet cinnamon breadstick,120,2,18,5,130,1,6
+Domino's,Build Your Own Pizza (1 slice),Customize your pizza with your favorite toppings,280,12,33,12,640,2,4
 Domino's,Pepperoni Pizza (1 slice),Handmade pepperoni pizza,290,13,34,13,690,2,4
 Domino's,Cheese Pizza (1 slice),Handmade cheese pizza,250,12,31,10,600,2,3
 Domino's,BBQ Chicken Pizza (1 slice),Grilled chicken with BBQ sauce,310,16,33,13,750,2,5
+Domino's,Meat Lovers Pizza (1 slice),Pepperoni sausage ham and bacon,330,16,34,16,820,2,4
+Domino's,Veggie Pizza (1 slice),Fresh vegetables and cheese,230,11,31,9,620,3,4
+Domino's,Hawaiian Pizza (1 slice),Ham and pineapple,270,13,33,11,720,2,5
 Domino's,Chicken Wings (6 piece),Breaded chicken wings,360,28,14,22,980,1,0
 Domino's,Pasta (Chicken Alfredo),Creamy alfredo pasta with chicken,380,20,42,15,920,3,4
+Chipotle,Chicken Bowl,Build your own bowl with chicken,705,46,83,16,1895,14,7
+Chipotle,Steak Bowl,Build your own bowl with steak,750,40,82,19,1830,14,6
+Chipotle,Barbacoa Bowl,Build your own bowl with barbacoa,770,42,84,20,2280,14,7
+Chipotle,Carnitas Bowl,Build your own bowl with carnitas,810,38,82,24,2050,14,6
+Chipotle,Sofritas Bowl,Build your own bowl with sofritas,680,20,87,18,2070,17,8
+Chipotle,Chicken Burrito,Build your own burrito with chicken,1065,54,125,25,2480,18,9
+Chipotle,Steak Burrito,Build your own burrito with steak,1110,48,124,28,2415,18,8
+Chipotle,Barbacoa Burrito,Build your own burrito with barbacoa,1130,50,126,29,2865,18,9
+Chipotle,Carnitas Burrito,Build your own burrito with carnitas,1170,46,124,33,2635,18,8
+Chipotle,Sofritas Burrito,Build your own burrito with sofritas,1040,28,129,27,2655,21,10
+Chipotle,Chicken Salad,Salad bowl with chicken,445,42,30,16,1740,11,7
+Chipotle,Steak Salad,Salad bowl with steak,490,36,29,19,1675,11,6
+Chipotle,Barbacoa Salad,Salad bowl with barbacoa,510,38,31,20,2125,11,7
+Chipotle,Carnitas Salad,Salad bowl with carnitas,550,34,29,24,1895,11,6
+Chipotle,Sofritas Salad,Salad bowl with sofritas,420,16,34,27,1915,14,8
+Cava,Grilled Chicken Bowl,Mediterranean bowl with grilled chicken,590,35,58,22,1080,8,6
+Cava,Braised Lamb Bowl,Mediterranean bowl with braised lamb,650,32,58,26,1180,8,6
+Cava,Falafel Bowl,Mediterranean bowl with falafel,620,18,65,28,1040,12,7
+Cava,RightRice Bowl with Chicken,RightRice base with grilled chicken,580,34,60,20,1100,6,4
+Cava,RightRice Bowl with Lamb,RightRice base with braised lamb,640,31,60,24,1200,6,4
+Cava,RightRice Bowl with Falafel,RightRice base with falafel,610,17,67,26,1060,10,5
+Cava,Greens Bowl with Chicken,Greens base with grilled chicken,520,33,35,22,1050,7,5
+Cava,Greens Bowl with Lamb,Greens base with braised lamb,580,30,35,26,1150,7,5
+Cava,Greens Bowl with Falafel,Greens base with falafel,550,16,42,28,1010,11,6
 Wendy's,Classic Single,Quarter pound beef patty,430,23,35,22,870,2,7
 Wendy's,Spicy Chicken Sandwich,Breaded spicy chicken,510,27,48,21,1380,3,5
 Wendy's,Chicken Nuggets (6 piece),Breaded chicken nuggets,270,14,15,16,600,1,0

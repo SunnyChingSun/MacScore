@@ -25,6 +25,7 @@ export interface Item {
 export interface Ingredient {
   id: string;
   name: string;
+  image_url: string | null;
   calories_per_100g: number;
   protein: number;
   carbs: number;
@@ -108,6 +109,7 @@ export interface MealItem {
   customizations: Customization[];
   nutrition: NutritionData;
   score: number;
+  quantity?: number; // Quantity/portion multiplier (default: 1.0)
 }
 
 export interface MealTray {

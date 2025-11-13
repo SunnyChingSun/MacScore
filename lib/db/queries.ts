@@ -24,10 +24,13 @@ async function queryPg<T>(query: string, params?: any[]): Promise<T[]> {
 export async function getRestaurants(): Promise<Restaurant[]> {
   if (isSupabaseConfigured()) {
     const supabase = getSupabaseClient();
+    
+    // Query with explicit limit to ensure we get all restaurants
     const { data, error } = await supabase
       .from("restaurants")
       .select("*")
-      .order("name");
+      .order("name")
+      .limit(1000); // Explicitly set a high limit to ensure we get all restaurants
     
     if (error) {
       console.error("[getRestaurants] Error:", error.message, error.code);
@@ -36,7 +39,7 @@ export async function getRestaurants(): Promise<Restaurant[]> {
     
     return (data || []) as Restaurant[];
   }
-  return queryPg<Restaurant>("SELECT * FROM restaurants ORDER BY name");
+  return await queryPg<Restaurant>("SELECT * FROM restaurants ORDER BY name");
 }
 
 export async function getRestaurantById(id: string): Promise<Restaurant | null> {

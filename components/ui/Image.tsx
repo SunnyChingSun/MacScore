@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { cn } from "@/lib/utils";
 
 interface ImageProps {
   src: string | null | undefined;
@@ -26,13 +27,31 @@ export function AppImage({
   const [error, setError] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
+  // Map objectFit to Tailwind classes
+  const objectFitClasses = {
+    contain: "object-contain",
+    cover: "object-cover",
+    fill: "object-fill",
+    none: "object-none",
+    "scale-down": "object-scale-down",
+  };
+
   // If no src or error occurred, show fallback
   if (!src || error) {
     if (fallback) {
       return (
         <div
-          className={className}
-          style={width && height ? { width, height, minWidth: width, minHeight: height } : undefined}
+          className={cn("flex-shrink-0", className)}
+          style={
+            width && height
+              ? {
+                  width: `${width}px`,
+                  height: `${height}px`,
+                  minWidth: `${width}px`,
+                  minHeight: `${height}px`,
+                }
+              : undefined
+          }
         >
           {fallback}
         </div>
@@ -42,22 +61,50 @@ export function AppImage({
     const defaultFallback = "🍔";
     return (
       <div
-        className={`flex items-center justify-center bg-gray-100 rounded-lg ${className}`}
-        style={width && height ? { width, height, minWidth: width, minHeight: height } : undefined}
+        className={cn(
+          "flex items-center justify-center bg-gray-100 rounded-lg flex-shrink-0",
+          className
+        )}
+        style={
+          width && height
+            ? {
+                width: `${width}px`,
+                height: `${height}px`,
+                minWidth: `${width}px`,
+                minHeight: `${height}px`,
+              }
+            : undefined
+        }
       >
         <span className="text-4xl">{defaultFallback}</span>
       </div>
     );
   }
 
+  // Check if className has width/height classes (w-* or h-*)
+  const hasSizeClasses = className && (className.includes("w-") || className.includes("h-"));
+  
   // Use regular img tag with error handling
   return (
     <div
-      className={`relative overflow-hidden rounded-lg ${className}`}
-      style={width && height ? { width, height, minWidth: width, minHeight: height } : undefined}
+      className={cn(
+        "relative overflow-hidden flex-shrink-0",
+        !hasSizeClasses && width && height && "aspect-square",
+        className
+      )}
+      style={
+        !hasSizeClasses && width && height
+          ? {
+              width: `${width}px`,
+              height: `${height}px`,
+              minWidth: `${width}px`,
+              minHeight: `${height}px`,
+            }
+          : undefined
+      }
     >
       {isLoading && (
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-100 rounded-lg">
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-100 rounded-lg z-10">
           <div className="animate-pulse text-gray-400 text-2xl">📷</div>
         </div>
       )}
@@ -67,9 +114,11 @@ export function AppImage({
         alt={alt}
         width={width}
         height={height}
-        className={`object-${objectFit} w-full h-full transition-opacity duration-300 ${
+        className={cn(
+          objectFitClasses[objectFit],
+          "w-full h-full transition-opacity duration-300",
           isLoading ? "opacity-0" : "opacity-100"
-        }`}
+        )}
         onError={() => {
           setError(true);
           setIsLoading(false);

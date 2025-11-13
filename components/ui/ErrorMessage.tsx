@@ -1,41 +1,41 @@
 "use client";
 
 import React from "react";
+import { Button } from "./Button";
 import { cn } from "@/lib/utils";
 
 interface ErrorMessageProps {
   message: string;
-  className?: string;
   onRetry?: () => void;
+  className?: string;
 }
 
 export function ErrorMessage({
   message,
-  className,
   onRetry,
+  className,
 }: ErrorMessageProps) {
   return (
     <div
       className={cn(
-        "bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-lg",
+        "bg-red-50 border border-red-200 rounded-lg p-4 text-center",
         className
       )}
-      role="alert"
     >
-      <div className="flex items-center justify-between">
-        <div className="flex items-center">
-          <span className="text-red-600 mr-2">⚠️</span>
-          <span>{message}</span>
-        </div>
-        {onRetry && (
-          <button
-            onClick={onRetry}
-            className="ml-4 text-red-600 hover:text-red-800 underline text-sm"
-          >
-            Retry
-          </button>
-        )}
+      <div className="text-red-800 mb-2">
+        <p className="font-medium">{message}</p>
       </div>
+      {onRetry && (
+        <Button
+          variant="primary"
+          size="sm"
+          onClick={onRetry}
+          className="mt-2"
+        >
+          Retry
+        </Button>
+      )}
     </div>
   );
 }
+

@@ -1,83 +1,79 @@
 import { NextRequest, NextResponse } from "next/server";
-import { z } from "zod";
-import {
-  getItemById,
-  getItemIngredients,
-  getIngredientsByIds,
-  getDefaultScoreProfile,
-} from "@/lib/db/queries";
+import { getItemById, getItemIngredients, getIngredientsByIds } from "@/lib/db/queries";
 import { calculateNutrition } from "@/lib/services/nutrition";
 import { calculateHealthScore } from "@/lib/services/scoring";
 import { Customization } from "@/types";
-
-const customizeSchema = z.object({
-  customizations: z.array(
-    z.object({
-      ingredient_id: z.string(),
-      action: z.enum(["add", "remove", "modify"]),
-      quantity_g: z.number().optional(),
-      multiplier: z.number().optional(),
-    })
-  ),
-  score_profile_id: z.string().optional(),
-});
 
 export async function POST(
   request: NextRequest,
   { params }: { params: { id: string } }
 ) {
   try {
-    const body = await request.json();
-    const { customizations, score_profile_id } = customizeSchema.parse(body);
+    const itemId = params.id;
 
-    // Get item and ingredients
-    const item = await getItemById(params.id);
-    if (!item) {
-      return NextResponse.json({ error: "Item not found" }, { status: 404 });
+    if (!itemId) {
+      return NextResponse.json(
+        { error: "Item ID is required" },
+        { status: 400 }
+      );
     }
 
-    const itemIngredients = await getItemIngredients(params.id);
-    const customizationIds = (customizations || []).map((c) => c.ingredient_id);
-    const allIngredientIds = [
-      ...itemIngredients.map((ii) => ii.ingredient_id),
-      ...customizationIds,
-    ];
-    const uniqueIngredientIds = [...new Set(allIngredientIds)];
-    const ingredients = uniqueIngredientIds.length > 0
-      ? await getIngredientsByIds(uniqueIngredientIds)
+    // Parse request body
+    const body = await request.json();
+    const customizations: Customization[] = body.customizations || [];
+
+    // Fetch item
+    const item = await getItemById(itemId);
+
+    if (!item) {
+      return NextResponse.json(
+        { error: "Item not found" },
+        { status: 404 }
+      );
+    }
+
+    // Fetch item ingredients
+    const itemIngredients = await getItemIngredients(itemId);
+
+    // Fetch ingredient details
+    const ingredientIds = itemIngredients.map((ii) => ii.ingredient_id);
+    // Also include any ingredients from customizations (for "add" action)
+    customizations.forEach((custom) => {
+      if (custom.action === "add" && custom.ingredient_id && !ingredientIds.includes(custom.ingredient_id)) {
+        ingredientIds.push(custom.ingredient_id);
+      }
+    });
+
+    const ingredients = ingredientIds.length > 0
+      ? await getIngredientsByIds(ingredientIds)
       : [];
 
-    // Calculate nutrition
+    // Calculate nutrition with customizations
     const nutrition = calculateNutrition(
       item,
       ingredients,
       itemIngredients,
-      customizations as Customization[]
+      customizations
     );
 
-    // Calculate score
-    const profile = await getDefaultScoreProfile();
-    const score = calculateHealthScore(nutrition, profile);
+    // Calculate health score
+    const score = calculateHealthScore(nutrition);
 
     return NextResponse.json({
       nutrition,
       score,
-      item: {
-        ...item,
-        nutrition,
-      },
     });
   } catch (error) {
-    if (error instanceof z.ZodError) {
-      return NextResponse.json(
-        { error: "Invalid request body", details: error.errors },
-        { status: 400 }
-      );
-    }
     console.error("Error customizing item:", error);
+    const errorMessage = error instanceof Error ? error.message : "Unknown error";
     return NextResponse.json(
-      { error: "Failed to customize item" },
+      {
+        error: "Failed to customize item",
+        message: errorMessage,
+        details: process.env.NODE_ENV === "development" ? String(error) : undefined,
+      },
       { status: 500 }
     );
   }
 }
+

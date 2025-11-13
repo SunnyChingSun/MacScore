@@ -1,41 +1,23 @@
 import { create } from "zustand";
 
 interface UIState {
-  isCustomizerOpen: boolean;
   activeItemId: string | null;
-  searchQuery: string;
   selectedRestaurantId: string | null;
+  searchQuery: string;
   openCustomizer: (itemId: string) => void;
   closeCustomizer: () => void;
-  setSearchQuery: (query: string) => void;
   setSelectedRestaurantId: (restaurantId: string | null) => void;
+  setSearchQuery: (query: string) => void;
 }
 
 export const useUIStore = create<UIState>((set) => ({
-  isCustomizerOpen: false,
   activeItemId: null,
-  searchQuery: "",
   selectedRestaurantId: null,
-
-  openCustomizer: (itemId) =>
-    set({
-      isCustomizerOpen: true,
-      activeItemId: itemId,
-    }),
-
-  closeCustomizer: () =>
-    set({
-      isCustomizerOpen: false,
-      activeItemId: null,
-    }),
-
-  setSearchQuery: (query) =>
-    set({
-      searchQuery: query,
-    }),
-
-  setSelectedRestaurantId: (restaurantId) =>
-    set({
-      selectedRestaurantId: restaurantId,
-    }),
+  searchQuery: "",
+  openCustomizer: (itemId: string) => set({ activeItemId: itemId }),
+  closeCustomizer: () => set({ activeItemId: null }),
+  setSelectedRestaurantId: (restaurantId: string | null) =>
+    set({ selectedRestaurantId: restaurantId }),
+  setSearchQuery: (query: string) => set({ searchQuery: query }),
 }));
+

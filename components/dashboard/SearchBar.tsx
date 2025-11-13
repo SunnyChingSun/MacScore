@@ -71,20 +71,20 @@ export function SearchBar() {
           onChange={(e) => setLocalQuery(e.target.value)}
           placeholder={
             selectedRestaurantId
-              ? "Search items in selected restaurant..."
-              : "Search for menu items..."
+              ? "Search items..."
+              : "Search menu items..."
           }
-          className="w-full px-4 py-3 pl-12 pr-24 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-macscore-red focus:border-transparent"
+          className="w-full px-4 py-3 sm:py-3 pl-10 sm:pl-12 pr-20 sm:pr-24 text-sm sm:text-base rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-macscore-red focus:border-transparent"
         />
-        <div className="absolute left-4 top-1/2 transform -translate-y-1/2">
+        <div className="absolute left-3 sm:left-4 top-1/2 transform -translate-y-1/2 text-gray-400">
           🔍
         </div>
-        <div className="absolute right-2 top-1/2 transform -translate-y-1/2 flex gap-2">
+        <div className="absolute right-1 sm:right-2 top-1/2 transform -translate-y-1/2 flex gap-1 sm:gap-2">
           {localQuery && (
             <button
               type="button"
               onClick={handleClear}
-              className="px-3 py-1 text-sm text-gray-500 hover:text-gray-700"
+              className="px-2 sm:px-3 py-1.5 sm:py-1 text-sm text-gray-500 hover:text-gray-700 touch-manipulation"
               aria-label="Clear search"
             >
               ✕
@@ -92,7 +92,7 @@ export function SearchBar() {
           )}
           <button
             type="submit"
-            className="px-4 py-2 text-sm font-medium text-white bg-macscore-red rounded-lg hover:bg-macscore-red/90 focus:outline-none focus:ring-2 focus:ring-macscore-red focus:ring-offset-2"
+            className="px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium text-white bg-macscore-red rounded-lg hover:bg-macscore-red/90 focus:outline-none focus:ring-2 focus:ring-macscore-red focus:ring-offset-2 touch-manipulation min-h-[44px]"
           >
             Search
           </button>
@@ -125,7 +125,7 @@ export function SearchBar() {
                 : `Results (${items.length})`}
             </h3>
           </div>
-          <div className="space-y-2 max-h-96 overflow-y-auto pr-2">
+          <div className="space-y-2 max-h-64 sm:max-h-96 overflow-y-auto pr-2">
             {items.map((item) => (
               <SearchResultItem key={item.id} item={item} />
             ))}
@@ -178,10 +178,10 @@ function SearchResultItem({ item }: { item: Item }) {
   return (
     <div
       onClick={handleClick}
-      className={`flex items-center gap-3 p-3 border rounded-lg cursor-pointer transition-all ${
+      className={`flex items-center gap-2.5 sm:gap-3 p-2.5 sm:p-3 border rounded-lg cursor-pointer transition-all touch-manipulation ${
         isActive
           ? "bg-macscore-red text-white border-macscore-red shadow-md"
-          : "bg-white border-gray-200 hover:shadow-md hover:border-macscore-red"
+          : "bg-white border-gray-200 hover:shadow-md hover:border-macscore-red active:bg-gray-50"
       }`}
     >
       {/* Item Image */}
@@ -191,33 +191,24 @@ function SearchResultItem({ item }: { item: Item }) {
           alt={item.name}
           width={64}
           height={64}
-          className="rounded-lg"
-          fallback={<div className="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-lg text-2xl">🍔</div>}
+          className="rounded-lg w-14 h-14 sm:w-16 sm:h-16"
+          objectFit="cover"
+          fallback={<div className="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center bg-gray-100 rounded-lg text-xl sm:text-2xl">🍔</div>}
         />
       </div>
 
       {/* Item Info */}
       <div className="flex-1 min-w-0">
-        <h4 className={`font-semibold truncate ${isActive ? "text-white" : "text-gray-800"}`}>
+        <h4 className={`font-semibold truncate text-sm sm:text-base mb-0.5 ${isActive ? "text-white" : "text-gray-800"}`}>
           {item.name}
         </h4>
-        <div className="flex items-center gap-2 mt-1">
-          <p className={`text-sm ${isActive ? "text-white/90" : "text-gray-500"}`}>
-            {item.base_calories.toFixed(0)} kcal
-          </p>
-          {item.description && (
-            <span className={`text-xs ${isActive ? "text-white/70" : "text-gray-400"}`}>•</span>
-          )}
-          {item.description && (
-            <p className={`text-xs truncate ${isActive ? "text-white/80" : "text-gray-400"}`}>
-              {item.description}
-            </p>
-          )}
-        </div>
+        <p className={`text-xs sm:text-sm ${isActive ? "text-white/90" : "text-gray-500"}`}>
+          {item.base_calories.toFixed(0)} kcal
+        </p>
       </div>
       {isActive && (
-        <div className="ml-2 flex-shrink-0">
-          <span className="text-white text-sm font-bold">✓</span>
+        <div className="ml-1 sm:ml-2 flex-shrink-0">
+          <span className="text-white text-sm sm:text-base font-bold">✓</span>
         </div>
       )}
     </div>

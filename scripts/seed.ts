@@ -37,6 +37,7 @@ interface SeedIngredient {
   fiber: number;
   sugar: number;
   allergen_flags: string[];
+  image_url?: string;
 }
 
 interface SeedItemIngredient {
@@ -97,28 +98,60 @@ function parseItemsCSV(content: string): SeedItem[] {
 
 function parseIngredientsCSV(content: string): SeedIngredient[] {
   const lines = content.trim().split("\n");
-  const headers = lines[0].split(",");
+  const headers = lines[0].split(",").map(h => h.trim());
   const ingredients: SeedIngredient[] = [];
 
   for (let i = 1; i < lines.length; i++) {
-    const values = lines[i].split(",");
+    // Handle CSV parsing more carefully to account for quoted values
+    const line = lines[i];
+    const values: string[] = [];
+    let current = "";
+    let inQuotes = false;
+
+    for (let j = 0; j < line.length; j++) {
+      const char = line[j];
+      if (char === '"') {
+        inQuotes = !inQuotes;
+      } else if (char === ',' && !inQuotes) {
+        values.push(current.trim());
+        current = "";
+      } else {
+        current += char;
+      }
+    }
+    values.push(current.trim()); // Push last value
+
     if (values.length < 8) continue;
 
-    const allergenStr = values[7]?.trim() || "";
+    const nameIndex = headers.indexOf("name");
+    const caloriesIndex = headers.indexOf("calories_per_100g");
+    const proteinIndex = headers.indexOf("protein");
+    const carbsIndex = headers.indexOf("carbs");
+    const fatIndex = headers.indexOf("fat");
+    const sodiumIndex = headers.indexOf("sodium");
+    const fiberIndex = headers.indexOf("fiber");
+    const sugarIndex = headers.indexOf("sugar");
+    const allergenIndex = headers.indexOf("allergen_flags");
+    const imageIndex = headers.indexOf("image_url");
+
+    const allergenStr = values[allergenIndex]?.trim() || "";
     const allergenFlags = allergenStr
-      ? allergenStr.split(",").map((a) => a.trim()).filter(Boolean)
+      ? allergenStr.replace(/^"|"$/g, "").split(",").map((a) => a.trim()).filter(Boolean)
       : [];
 
+    const imageUrl = imageIndex >= 0 && values[imageIndex] ? values[imageIndex].trim() : undefined;
+
     ingredients.push({
-      name: values[0].trim(),
-      calories_per_100g: parseFloat(values[1]) || 0,
-      protein: parseFloat(values[2]) || 0,
-      carbs: parseFloat(values[3]) || 0,
-      fat: parseFloat(values[4]) || 0,
-      sodium: parseFloat(values[5]) || 0,
-      fiber: parseFloat(values[6]) || 0,
-      sugar: parseFloat(values[7]) || 0,
+      name: values[nameIndex]?.trim() || "",
+      calories_per_100g: parseFloat(values[caloriesIndex]) || 0,
+      protein: parseFloat(values[proteinIndex]) || 0,
+      carbs: parseFloat(values[carbsIndex]) || 0,
+      fat: parseFloat(values[fatIndex]) || 0,
+      sodium: parseFloat(values[sodiumIndex]) || 0,
+      fiber: parseFloat(values[fiberIndex]) || 0,
+      sugar: parseFloat(values[sugarIndex]) || 0,
       allergen_flags: allergenFlags,
+      image_url: imageUrl,
     });
   }
 
@@ -225,8 +258,8 @@ async function seedPostgres() {
         ingredientMap.set(ingredient.name, existing.rows[0].id);
       } else {
         const result = await client.query(
-          `INSERT INTO ingredients (name, calories_per_100g, protein, carbs, fat, sodium, fiber, sugar, allergen_flags)
-           VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING id`,
+          `INSERT INTO ingredients (name, calories_per_100g, protein, carbs, fat, sodium, fiber, sugar, allergen_flags, image_url)
+           VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING id`,
           [
             ingredient.name,
             ingredient.calories_per_100g,
@@ -237,6 +270,7 @@ async function seedPostgres() {
             ingredient.fiber,
             ingredient.sugar,
             ingredient.allergen_flags,
+            ingredient.image_url || null,
           ]
         );
         ingredientMap.set(ingredient.name, result.rows[0].id);
@@ -417,6 +451,7 @@ async function seedSupabase() {
     fiber: ing.fiber,
     sugar: ing.sugar,
     allergen_flags: ing.allergen_flags,
+    image_url: ing.image_url || null,
   }));
 
   // Get existing ingredients
@@ -443,6 +478,7 @@ async function seedSupabase() {
         fiber: ing.fiber,
         sugar: ing.sugar,
         allergen_flags: ing.allergen_flags,
+        image_url: ing.image_url || null,
       })) as any
     );
     if (error && !error.message?.includes("duplicate")) throw error;
